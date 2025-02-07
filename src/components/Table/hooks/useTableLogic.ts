@@ -76,7 +76,7 @@ const useTableLogic = (numberOfElementsToHighlight: number) => {
     const newRow = Array.from({ length: tableData[0].length }, (_, colId) => {
       return {
         id: tableData.length * 1000 + colId,
-        amount: getRandomNumber(999),
+        amount: getRandomNumber(999) + 100,
       };
     });
     const newData = [...tableData, newRow];
