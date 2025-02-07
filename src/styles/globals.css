@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* --background: #ffffff; */
+  /* --foreground: #171717; */
+  --backFromTestTask: #111319;
+  --colorsFromTestTask: #e4e6e7;
+  --scrollColor: #7e8080;
+  --dividersColor: #525757;
+  --highlightColor: #4d555a;
+}
+
+/* @media (prefers-color-scheme: dark) { */
+:root {
+  --background: var(--backFromTestTask);
+  --foreground: var(--colorsFromTestTask);
+  --scroll: var(--scrollColor);
+  --divider: var(--dividersColor);
+  --highlight: var(--highlightColor);
+}
+* {
+  box-sizing: border-box;
+}
+/* } */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.myGrid {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c _";
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  top: 0;
+  opacity: 0;
+  border-radius: 10px;
+  background: var(--scrollColor);
+}
+
+#scroll::-webkit-scrollbar {
+  display: none;
+}
